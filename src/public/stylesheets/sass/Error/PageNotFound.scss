@@ -1,0 +1,35 @@
+
+.PageNotFound {
+  width: 70%;
+  padding: 3%;
+  margin: auto;
+  border-radius: 10px;
+  background-color: black;
+  box-shadow: 0 0 100px #ff9966;
+
+  & > h1, p {
+    text-align: center;
+    color: red;
+    font-size: 40px;
+  }
+
+  & > p {
+    margin: 2% 0 0 0;
+    padding: 2%;
+    color: #99ebff;
+    font-size: 20px;
+  }
+
+  & > a {
+    color: skyblue;
+    float: right;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: color 2s; /* Safari */
+    transition: color 2s;
+
+    &:hover {
+      color: white;
+    }
+  }
+}

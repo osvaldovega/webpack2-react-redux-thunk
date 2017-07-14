@@ -2,10 +2,10 @@
 function buildConfig() {
   const deploy = process.env.NODE_ENV.replace(/\s/g, '');
   if (deploy === 'prod') {
-    console.log('\n\tBuilding project for PRODUCTION...\n');
+    console.log('\n\tPRODUCTION: TRUE\n\tDEVELOPMENT: FALSE\n');
     return require('./config/prod.js');
   }
-  console.log('\n\tBuilding project for DEVELOPMENT...\n');
+  console.log('\n\tPRODUCTION: FALSE\n\tDEVELOPMENT: TRUE\n');
   return require('./config/dev.js');
 }
 

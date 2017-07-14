@@ -7,8 +7,8 @@ module.exports = webpackMerge(commonConfig, {
   devtool: 'source-map',
   output: {
     path: path.join(__dirname, '../dist'),
-    filename: 'assets/js/[name].[hash].bundle.js',
-    chunkFilename: 'assets/js/[id].[hash].bundle.js',
+    filename: 'assets/js/[name].bundle.js',
+    chunkFilename: 'assets/js/[name].bundle.js',
     publicPath: '/'
   },
   plugins: [
@@ -30,7 +30,8 @@ module.exports = webpackMerge(commonConfig, {
         keep_fnames: true
       },
       compress: {
-        screw_ie8: true
+        screw_ie8: true,
+        warnings: false
       },
       comments: false
     })

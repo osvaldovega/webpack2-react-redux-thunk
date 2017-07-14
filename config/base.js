@@ -14,7 +14,7 @@ module.exports = {
   entry: ENTRY,
   target: 'web',
   resolve: {
-    extensions: [' ', '.js', '.jsx','css','scss'],
+    extensions: ['.js', '.jsx','css','scss'],
     modules: [path.join(__dirname, 'src'), 'node_modules']
   },
 

@@ -4,16 +4,17 @@ const path = require('path');
 const commonConfig = require('./base.js');
 
 module.exports = webpackMerge(commonConfig, {
+  devtool: 'cheap-module-eval-source-map ',
   output: {
     path: path.join(__dirname, '../dist'),
-    filename: '[name].[hash].bundle.js',
+    filename: '[name].bundle.js',
     publicPath: '/',
-    sourceMapFilename: '[name].[hash].map'
+    sourceMapFilename: '[name].map'
   },
-  devtool: 'cheap-module-eval-source-map ',
   devServer: {
     contentBase: path.join(__dirname, '../src'),
     inline: true,
+    noInfo: false,
     historyApiFallback: true,
     stats: 'minimal',
     host: 'localhost',

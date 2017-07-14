@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { fetchApodData } from '../actions';
-import PropTypes from 'prop-types';
-import Apod from './Apod/Apod';
+import Apod from './Apod/Apod.jsx';
 import * as types from '../common/labels';
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentDidMount() {
-
     if (!this.props.Apod.dataFetched) {
       this.props.fetchApodData();
     }
